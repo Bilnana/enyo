@@ -1,0 +1,48 @@
+.hero {
+  color: $white;
+
+  h1 {
+    text-transform: uppercase;
+    margin-bottom: 37px;
+    letter-spacing: 5px;
+
+    @include mq(to768) {
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    @include mq(from768to1200) {
+      text-align: center;
+    }
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 2;
+    text-align: center;
+
+    @include mq(to768) {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  }
+
+  .hero__inner {
+    max-width: 793px;
+    width: 100%;
+    padding: 150px 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include mq(to768) {
+      padding: 25px 0 100px;
+    }
+
+    @include mq(from768to1200) {
+      padding: 25px 0;
+      margin: 50px auto 80px;
+    }
+  }
+}

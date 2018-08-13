@@ -1,0 +1,106 @@
+/* ==========================================================================
+   #WRAPPERS
+   ========================================================================== */
+.download {
+  .download__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    @include mq(to768) {
+      flex-direction: column;
+    }
+
+    p {
+      line-height: 2;
+    }
+
+    .free-resources {
+      position: absolute;
+      top: -18px;
+
+      @include mq(to768) {
+        top: -85px;
+        width: 95%;
+      }
+
+      @include mq(from768to1200) {
+        width: 90%;
+      }
+    }
+
+    .download__info {
+      max-width: 600px;
+      z-index: 1;
+    }
+  }
+}
+
+.info {
+  text-align: center;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+
+  .info__questions {
+    h5,
+    p {
+      margin-bottom: 25px;
+    }
+
+    img {
+      width: 55px;
+      height: 55px;
+      margin-bottom: 25px;
+    }
+
+    .info__contact {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 50px;
+
+      @include mq(to550) {
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      a {
+        font-size: 22px;
+        font-weight: 700;
+        color: $blue-primary;
+      }
+
+      .info__mail {
+        @extend %icomoon;
+
+        display: flex;
+        align-items: center;
+
+        @include mq(to550) {
+          margin-bottom: 30px;
+        }
+
+        &::before {
+          @extend .icon-mail;
+
+          margin-right: 20px;
+        }
+      }
+
+      .info__telephone {
+        @extend %icomoon;
+
+        display: flex;
+        align-items: center;
+
+        &::before {
+          @extend .icon-telephone;
+
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+// /* ==========================================================================
+//    #LAYOUT
+//    ========================================================================== */
+
+body {
+  width: 100%;
+  font-family: 'Roboto Condensed';
+  color: $font-color;
+  background-color: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $blue-primary;
+}
+
+h2 {
+  margin-bottom: 50px;
+
+  .l-plans__item & {
+    margin-bottom: 0;
+  }
+
+  @include mq(to768) {
+    margin-bottom: 50px;
+  }
+}
+
+p {
+  font-size: 18px;
+}
+
+.logo {
+  width: 120px;
+  height: 31px;
+}
+
+.layout-container {
+  width: 100%;
+}
+
+.s-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 125px 0 125px;
+
+  .download & {
+    margin: -135px auto 0;
+  }
+
+  @include mq(to768) {
+    padding: 50px 20px;
+
+    .download & {
+      margin: 0 auto;
+    }
+
+    .menu & {
+      padding: 0;
+    }
+  }
+
+  @include mq(from768to1200) {
+    padding: 70px 50px;
+
+    .download & {
+      margin: -110px auto 0;
+    }
+  }
+}
+
+.b-container {
+  width: 100%;
+}

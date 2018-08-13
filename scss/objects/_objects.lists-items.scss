@@ -1,0 +1,294 @@
+/* ==========================================================================
+   #LIST-BASIC
+   ========================================================================== */
+.options {
+  margin-top: 50px;
+
+  .options__item {
+    color: $color-paragraph;
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+
+    @extend %icomoon;
+
+    &::before {
+      @extend .icon-success;
+
+      color: $radical-red;
+      margin-right: 12px;
+    }
+  }
+}
+
+.l-benefits {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include mq(to768) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include mq(from768to1200) {
+    justify-content: center;
+  }
+
+  h5 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  .l-benefits__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 320px;
+    width: 100%;
+    margin-bottom: 50px;
+    position: relative;
+    padding-left: 80px;
+
+    @include mq(to768) {
+      margin: 25px auto;
+    }
+
+    @include mq(from768to1200) {
+      max-width: 300px;
+      width: 100%;
+    }
+  }
+
+  .benefits__image {
+    width: 55px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.features {
+  position: relative;
+
+  .feature__item {
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 25px 0;
+    z-index: 1;
+    position: absolute;
+
+    @include mq(to768) {
+      display: none;
+    }
+
+    @include mq(from768to1200) {
+      padding: 25px 25px;
+    }
+
+    img {
+      width: 35px;
+      height: 35px;
+      position: absolute;
+    }
+
+    .feature__shape {
+      height: 0;
+      border-bottom: 2px dashed $radical-red;
+      width: 100%;
+    }
+  }
+
+  .left-top {
+    top: 250px;
+    left: 0;
+
+    img {
+      bottom: -19px;
+      right: -17px;
+    }
+
+    h5 {
+      border-bottom: 2px solid $radical-red;
+      padding-bottom: 10px;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+
+    .feature__desc {
+      order: 1;
+    }
+
+    .feature__shape {
+      transform: rotate(24deg);
+      order: 2;
+      margin-top: 70px;
+    }
+  }
+
+  .left-bottom {
+    bottom: 150px;
+    left: 0;
+
+    img {
+      top: -19px;
+      right: -17px;
+    }
+
+    h5 {
+      border-top: 2px solid $radical-red;
+      padding-top: 10px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    .feature__desc {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .feature__shape {
+      transform: rotate(-24deg);
+      margin-top: 33px;
+    }
+  }
+
+  .right-top {
+    top: 250px;
+    right: 0;
+    text-align: right;
+
+    img {
+      bottom: -19px;
+      left: -17px;
+    }
+
+    h5 {
+      border-bottom: 2px solid $radical-red;
+      padding-bottom: 10px;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+
+    .feature__desc {
+      order: 2;
+    }
+
+    .feature__shape {
+      transform: rotate(-24deg);
+      order: 1;
+      margin-top: 70px;
+    }
+  }
+
+  .right-bottom {
+    bottom: 150px;
+    right: 0;
+    text-align: right;
+
+    img {
+      bottom: -19px;
+      left: -17px;
+    }
+
+    h5 {
+      border-top: 2px solid $radical-red;
+      padding-top: 10px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    .feature__desc {
+      order: 2;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .feature__shape {
+      transform: rotate(24deg);
+      order: 1;
+      margin-top: 33px;
+    }
+  }
+}
+
+.l-plans {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 75px 0;
+
+  @include mq(to768) {
+    flex-direction: column;
+  }
+
+  .l-plans__item {
+    background-color: $white;
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    padding: 38px 0;
+    box-shadow: 0 1px 12px -6px rgba(0, 0, 0, 0.75);
+
+    @include mq(to768) {
+      margin-bottom: 30px;
+    }
+
+    @include mq(from768to1200) {
+      margin-left: 20px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    p:first-child {
+      margin-bottom: 50px;
+    }
+
+    p:last-child {
+      margin-top: 50px;
+    }
+
+    .l-plans__priceBox {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .l-plans__price {
+      font-size: 44px;
+      color: $blue-primary;
+      margin-right: 10px;
+      font-weight: 500;
+    }
+
+    .l-plans__dolar {
+      font-size: 24px;
+      color: $blue-primary;
+      margin-right: 10px;
+    }
+
+    .l-plans__mounth {
+      font-size: 20px;
+      color: $blue-primary;
+      font-weight: 300;
+    }
+  }
+}

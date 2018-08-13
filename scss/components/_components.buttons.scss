@@ -1,0 +1,44 @@
+// /* ==========================================================================
+//    #BUTTONS
+//    ========================================================================== *
+
+.btn {
+  padding: 20px 0;
+  text-decoration: none;
+  border-radius: 30px;
+  max-width: 217px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  font-size: 18px;
+  margin-top: 55px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: darken($blue-primary, 5%);
+  }
+
+  &-blue {
+    background-color: $blue-primary;
+
+    @include mq(to768) {
+      margin: 50px auto;
+    }
+  }
+
+  &-download {
+    background-color: $blue-primary;
+
+    @extend %icomoon;
+
+    &::before {
+      @extend .icon-download;
+
+      margin-right: 10px;
+      color: $color-paragraph;
+      font-size: 14px;
+    }
+  }
+}

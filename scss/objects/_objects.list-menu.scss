@@ -1,0 +1,64 @@
+/* ==========================================================================
+   #LIST MENU
+   ========================================================================== */
+.menu {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  @include mq(to768) {
+    visibility: hidden;
+    flex-direction: column;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: $lochmara;
+    z-index: 2;
+    height: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &.open {
+    visibility: visible;
+    height: calc(100vh - 100px);
+    width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .menu__item {
+    margin-right: 20px;
+
+    @include mq(to768) {
+      margin: 0 auto;
+      padding: 20px 0;
+      border-bottom: 2px solid $color-paragraph;
+      width: 100%;
+      text-align: center;
+    }
+
+    a {
+      color: $white;
+      font-weight: bold;
+      transition: all 0.25s ease-in-out;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      @include mq(to768) {
+        margin: 0 auto;
+      }
+    }
+
+    &:hover {
+      a {
+        color: $blue-primary;
+      }
+    }
+  }
+}
